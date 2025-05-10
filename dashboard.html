@@ -17,47 +17,56 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/School_icon.svg/1024px-School_icon.svg.png" class="h-8" alt="Logo">
         <h1 class="text-xl font-bold">Notre Dame School UK</h1>
       </div>
-      <a href="index.html" class="text-sm hover:underline">← Back to Home</a>
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="index.html" class="hidden md:inline text-sm hover:underline">← Back to Home</a>
     </div>
   </header>
 
   <!-- Sidebar + Main Content -->
   <div class="flex">
+
     <!-- Sidebar -->
-    <aside class="w-64 bg-white shadow-lg h-screen sticky top-0 p-6 space-y-4 hidden md:block">
+    <aside id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 md:relative md:translate-x-0 md:block p-6 space-y-4">
+      <!-- Close Button (Mobile only) -->
+      <div class="flex justify-end md:hidden">
+        <button id="close-sidebar" class="text-gray-700 text-xl">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
       <nav class="space-y-3 text-[#0072bb] font-medium">
         <a href="#" class="block hover:text-[#ff9f1c]"><i class="fas fa-home mr-2"></i> Home</a>
         <a href="#" class="block hover:text-[#ff9f1c]"><i class="fas fa-calendar mr-2"></i> Calendar</a>
         <a href="#" class="block hover:text-[#ff9f1c]"><i class="fas fa-list mr-2"></i> To-do</a>
         <a href="#" class="block hover:text-[#ff9f1c]"><i class="fas fa-cogs mr-2"></i> Settings</a>
-        <a href="index.html" class="block hover:text-red-600"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a>
+        <a href="login.html" class="block hover:text-red-600"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a>
       </nav>
     </aside>
 
     <!-- Main Section -->
-    <main class="flex-1 p-6">
+    <main class="flex-1 p-6 mt-4 md:mt-0">
       <h2 class="text-2xl font-bold text-[#0072bb] mb-6">Your Courses</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <!-- Course Card Example -->
         <a href="course.html" class="block">
-            <!-- Course card -->
-        <div class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition">
+          <div class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition">
             <div class="bg-gradient-to-r from-[#0072bb] to-blue-400 text-white px-4 py-3">
-                <h3 class="text-lg font-bold">Machine Learning Theory</h3>
-                <p class="text-sm">CSE 17</p>
-         </div>
-
-
-          <div class="p-4">
-            <p class="text-sm text-gray-700 mb-2">Instructor: Saiful Islam</p>
-            <div class="flex justify-end space-x-2">
-              <button class="text-[#0072bb] hover:text-[#ff9f1c]"><i class="fas fa-folder-open"></i></button>
-              <button class="text-[#0072bb] hover:text-[#ff9f1c]"><i class="fas fa-cog"></i></button>
+              <h3 class="text-lg font-bold">Machine Learning Theory</h3>
+              <p class="text-sm">CSE 17</p>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-gray-700 mb-2">Instructor: Saiful Islam</p>
+              <div class="flex justify-end space-x-2">
+                <button class="text-[#0072bb] hover:text-[#ff9f1c]"><i class="fas fa-folder-open"></i></button>
+                <button class="text-[#0072bb] hover:text-[#ff9f1c]"><i class="fas fa-cog"></i></button>
+              </div>
             </div>
           </div>
-        </div>
-         </a>
-        <!-- Duplicate this block and customize for more courses -->
+        </a>
+
+        <!-- Another Course -->
         <div class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition">
           <div class="bg-gradient-to-r from-purple-600 to-indigo-400 text-white px-4 py-3">
             <h3 class="text-lg font-bold">Digital System Design</h3>
@@ -76,6 +85,23 @@
       </div>
     </main>
   </div>
+
+  <!-- Sidebar Toggle Script -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const openBtn = document.getElementById('mobile-menu-toggle');
+    const closeBtn = document.getElementById('close-sidebar');
+
+    openBtn.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      document.body.style.overflow = '';
+    });
+  </script>
 
 </body>
 </html>
