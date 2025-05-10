@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Course Page | Notre Dame School UK</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@1.6.6/dist/flowbite.min.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+          html {
+            scroll-behavior: smooth;
+          }
+          .fade-in {
+            animation: fadeIn 1s ease-in-out;
+          }
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+        </style>
+      </head>
+      
+<body class="bg-gray-100 font-sans text-gray-800">
+
+  <!-- Top Bar -->
+  <div class="bg-[#0072bb] text-white px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/School_icon.svg/1024px-School_icon.svg.png" class="h-8" alt="Logo">
+      <span class="text-xl font-semibold">Notre Dame School UK</span>
+    </div>
+    <a href="dashboard.html" class="text-sm hover:underline">← Back to Dashboard</a>
+  </div>
+
+  <!-- Course Banner -->
+  <div class="bg-green-500 text-white py-10 px-6">
+    <h1 class="text-3xl font-bold">Machine Learning Theory</h1>
+    <p class="text-sm mt-2">Instructor: Saiful Islam</p>
+  </div>
+
+  <!-- Tabs -->
+  <div class="bg-white shadow-md px-6">
+    <ul class="flex space-x-6 border-b text-sm font-medium">
+      <li><a href="#" class="py-4 border-b-2 border-[#ff9f1c] text-[#ff9f1c]">Stream</a></li>
+      <li><a href="#" class="py-4 hover:text-[#0072bb]">Classwork</a></li>
+      <li><a href="#" class="py-4 hover:text-[#0072bb]">People</a></li>
+      <li><a href="#" class="py-4 hover:text-[#0072bb]">Grades</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-4xl mx-auto mt-6 space-y-6">
+
+    <!-- Class Code -->
+    <div class="bg-white p-4 rounded shadow flex justify-between items-center">
+      <p class="font-semibold">Class code:</p>
+      <div class="text-blue-600 font-mono text-lg">hmh6ao2I</div>
+    </div>
+
+    <!-- Post Box -->
+    <div class="bg-white shadow-md rounded-lg p-4">
+      <div class="text-sm text-gray-700 font-medium mb-2">For</div>
+      <div class="flex items-center space-x-4 mb-3">
+        <select class="border rounded px-3 py-1 text-sm">
+          <option>asfdaf</option>
+        </select>
+        <button class="text-blue-600 text-sm hover:underline"><i class="fas fa-user-friends mr-1"></i>All students</button>
+      </div>
+
+      <!-- Input Area -->
+      <textarea placeholder="Announce something to your class"
+        class="w-full border border-gray-300 p-3 rounded-md mb-3 resize-none focus:ring-2 focus:ring-[#ff9f1c] focus:outline-none"></textarea>
+
+      <!-- Text Controls -->
+      <!-- Footer Section -->
+      <div class="flex items-center justify-between">
+        <!-- Icon Buttons -->
+        <div class="flex space-x-4">
+          <button class="rounded-full border p-2 hover:bg-gray-100" title="YouTube">
+            <i class="fab fa-youtube text-lg text-gray-700"></i>
+          </button>
+          <button class="rounded-full border p-2 hover:bg-gray-100" title="Upload">
+            <i class="fas fa-upload text-lg text-gray-700"></i>
+          </button>
+          <button class="rounded-full border p-2 hover:bg-gray-100" title="Link">
+            <i class="fas fa-link text-lg text-gray-700"></i>
+          </button>
+        </div>
+
+        <!-- Post Buttons -->
+        <div class="space-x-2">
+          <button class="text-blue-600 text-sm hover:underline">Cancel</button>
+          <button class="bg-gray-200 text-gray-500 text-sm px-4 py-2 rounded-md cursor-not-allowed" disabled>Post</button>
+          <button class="bg-gray-200 px-2 py-2 rounded-md"><i class="fas fa-caret-down text-gray-500"></i></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-12 bg-[#0047BA] text-white text-center py-4">
+    <p>&copy; 2025 Notre Dame School UK. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
