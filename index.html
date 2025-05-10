@@ -102,9 +102,32 @@
       </ul>
     </div>
   </div>
-  
+  <!-- Mobile Hamburger -->
+<div class="md:hidden flex items-center">
+  <button id="menu-toggle" class="text-[#0072bb] focus:outline-none">
+    <i class="fas fa-bars text-2xl"></i>
+  </button>
+</div>
   
   </nav>
+<!-- Mobile Sidebar -->
+<div id="mobile-menu" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+  <div class="flex justify-between items-center px-4 py-4 border-b">
+    <h2 class="text-[#0072bb] font-bold text-lg">Menu</h2>
+    <button id="close-menu" class="text-gray-600">
+      <i class="fas fa-times text-xl"></i>
+    </button>
+  </div>
+  <ul class="px-4 py-6 space-y-4 text-gray-800 font-medium">
+    <li><a href="#" class="block hover:text-[#ff9f1c]">Product</a></li>
+    <li><a href="#testimonials" class="block hover:text-[#ff9f1c]">Success</a></li>
+    <li><a href="#about" class="block hover:text-[#ff9f1c]">About</a></li>
+    <li><a href="contact.html" class="block hover:text-[#ff9f1c]">Contact</a></li>
+    <li><a href="courses.html" class="block hover:text-[#ff9f1c]">Courses</a></li>
+    <li><a href="login.html" class="block hover:text-[#ff9f1c]">Login</a></li>
+    <li><a href="#" class="block hover:text-[#ff9f1c]">Request a Demo</a></li>
+  </ul>
+</div>
 
   <!-- Hero -->
   <section class="relative h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('pexels-max-fischer-5212331.jpg');">
@@ -226,6 +249,19 @@
   <footer class="bg-[#0047BA] text-white py-6 text-center">
     <p>&copy; 2025 Notre Dame School UK. All rights reserved.</p>
   </footer>
-
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('-translate-x-full');
+    });
+  
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-x-full');
+    });
+  </script>
+  
 </body>
 </html>
