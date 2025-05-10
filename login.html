@@ -25,7 +25,9 @@
   <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-md w-full bg-white shadow-lg rounded-lg p-8">
       <h2 class="mb-6 text-center text-2xl font-extrabold text-[#0072bb]">Login to Your Account</h2>
-      <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+      
+      <!-- Redirect-based login form for static hosting -->
+      <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';" class="space-y-6">
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
           <input id="email" name="email" type="email" required
@@ -59,7 +61,6 @@
 
       <p class="mt-6 text-center text-sm text-gray-600">
         Don't have an account?
-
         <a href="register.html" class="text-[#0072bb] font-medium hover:underline">Register here</a>
       </p>
     </div>
